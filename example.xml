@@ -1,0 +1,28 @@
+<ALEXA VER="0.9" URL="wikipedia.org/" HOME="0" AID="="> 
+  <SD TITLE="A" FLAGS="DMOZ" HOST="wikipedia.org">
+    <TITLE TEXT="Wikipedia"/>
+    <ADDR STREET=" P.O. Box 78350" CITY=" San Francisco" STATE="CA" ZIP="94107" COUNTRY="US"/>
+    <CREATED DATE="13-Jan-2001" DAY="13" MONTH="01" YEAR="2001"/>
+    <PHONE NUMBER="+1-415-839-6885"/>
+    <OWNER NAME="Wikimedia Foundation, Inc."/>
+    <EMAIL ADDR="info-en@wikimedia.org"/>
+    <DOS>
+      <DO DOMAIN="wikiquote.org" TITLE="wikiquote.org"/>
+      <DO DOMAIN="jimmywales.com" TITLE="jimmywales.com"/>      
+    </DOS>
+    <LANG LEX="en"/>
+    <LINKSIN NUM="431555"/>
+    <SPEED TEXT="1242" PCT="58"/>
+    <REVIEWS AVG="4.5" NUM="135"/>
+    <CHILD SRATING="0"/>
+  </SD>
+  <KEYWORDS>
+    <KEYWORD VAL="On the Web"/>
+    <KEYWORD VAL="Tracking"/>
+  </KEYWORDS> 
+  <SD>
+    <POPULARITY URL="wikipedia.org/" TEXT="8"/>
+    <REACH RANK="5"/>
+    <RANK DELTA="+0"/>
+  </SD>
+</ALEXA>
