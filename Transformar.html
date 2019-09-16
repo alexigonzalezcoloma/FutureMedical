@@ -184,18 +184,18 @@
 	   return "{\n" + tab + (tab ? json.replace(/\t/g, tab) : json.replace(/\t|\n/g, "")) + "\n}";
 	}
 	
-	var xml = '<e name="value">text</e>';
-	dom = parseXml(xml);
-	json = xml2json(dom);
-    xml2 = json2xml(eval(json));
+	//var xml = '<e name="value">text</e>';
+	//dom = parseXml(xml);
+	//json = xml2json(dom);
+    //xml2 = json2xml(eval(json));
 
-	/*	var xhttp = new XMLHttpRequest();
-		xhttp.open("GET", "example.xml", true);
-		xhttp.send();		
-		var xmlDoc =+xhttp.responseText;
-		dom = parseXml(xmlDoc);
-		json = xml2json(dom);
-	*/
+	var  xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "example.xml", true);
+	xhttp.send();		
+	var xmlDoc=String(xhttp.response);
+	dom = parseXml(xmlDoc);
+	json = xml2json(dom);
+
 </script>
 
 </html>
