@@ -7,7 +7,9 @@
 	<title>Document</title>
 </head>
 <body>
-	
+	<input type="file" id="file-input" />
+	<h3>Contenido del archivo:</h3>
+	<pre id="contenido-archivo"></pre>
 </body>
 
 <script type="text/javascript">
@@ -184,21 +186,29 @@
 	   return "{\n" + tab + (tab ? json.replace(/\t/g, tab) : json.replace(/\t|\n/g, "")) + "\n}";
 	}
 	
-	var xml = '<e name="value">text</e>';
-	dom = parseXml(xml);
-	json = xml2json(dom);
-    //xml2 = json2xml(eval(json));
+	function leerArchivo(e) {
+	var archivo = e.target.files[0];
+	if (!archivo) {
+		return;
+	}
+	var lector = new FileReader();
+	lector.onload = function(e) {
+		var contenido = e.target.result;
+		docum=xml2json(parseXml(contenido));
+		mostrarContenido(contenido);
+	};
+	lector.readAsText(archivo);
+	}
 
-	var  xhttp = new XMLHttpRequest();
-	xhttp.open("GET", "example.xml", true);
-	xhttp.send();		
-	/*var xmlDoc=xhttp.responseText;
-	dom = parseXml(xmlDoc);
-	json = xml2json(dom);*/
+	function mostrarContenido(contenido) {
+	var elemento = document.getElementById('contenido-archivo');
+	elemento.innerHTML = contenido;
+	}
 
-	docum=xml2json(parseXml(xhttp.responseText));
-
-
+	document.getElementById('file-input')
+	.addEventListener('change', leerArchivo, false);
+	
+	
 </script>
 
 </html>
