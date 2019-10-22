@@ -203,11 +203,6 @@
 		var contenido = e.target.result;
 		docum_json+=xml2json(parseXml(contenido));
 		mostrarContenido(docum_json);
-
-
-		$('#generar').click (function(){
-        $("#contenedor").load("index.php",{soy_la_variable: docum_json});
-    	});
 	};
 	lector.readAsText(archivo);
 	}
@@ -222,9 +217,11 @@
 
 	
 
-	
+	var docum_json2=' {undefined"archetype":{"@xmlns":"http://schemas.openehr.org/v1","@xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance"}'
 
-	
+	$('#generar').click (function(){
+        $("#contenedor").load("index.php",{soy_la_variable: docum_json2 });
+    });
 	
 	
 </script>
