@@ -191,7 +191,7 @@
 	   return "{\n" + tab + (tab ? json.replace(/\t/g, tab) : json.replace(/\t|\n/g, "")) + "\n}";
 	}
 	
-	var  docum_json='';
+	//var  docum_json='';
 
 	function leerArchivo(e) {
 	var archivo = e.target.files[0];
@@ -201,12 +201,15 @@
 	var lector = new FileReader();
 	lector.onload = function(e) {
 		var contenido = e.target.result;
-		docum_json+=xml2json(parseXml(contenido));
-		mostrarContenido(docum_json);
+		var docum_json=xml2json(parseXml(contenido));
+		var res='';
+		res+=docum_json.replace("undefined","");
+		
+		mostrarContenido(res);
 
 
 		$('#generar').click (function(){
-        $("#contenedor").load("index.php",{soy_la_variable: docum_json});
+        $("#contenedor").load("transformar.php",{soy_la_variable: res});
     	});
 	};
 	lector.readAsText(archivo);
@@ -221,13 +224,6 @@
 	.addEventListener('change', leerArchivo, false);
 
 	
-
-	
-
-	
-	
-	
-</script>
 
 	
 
