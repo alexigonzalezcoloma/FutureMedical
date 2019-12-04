@@ -1,19 +1,18 @@
 <?php
-    $json = $_REQUEST['soy_la_variable'];    
-    $file = fopen("archivo.json", "a");
+require 'vendor/autoload.php' ;
+$uri="mongodb://usuario:password@host_base_datos/base_de_datos?ssl=false";
+$client=new MongoDB\Client($uri);
 
-    fwrite($file, $json . PHP_EOL);
-    
-    fclose($file);
-    echo 'doc creado';
+$data = file_get_contents("archivo.json");
 
-   /* $data = file_get_contents("archivo.json");
-    $products = json_decode($data, true);
- 
-    foreach ($products as $product) {
-        echo '<pre>';
-        print_r($product);
-        echo '</pre>';
-    }*/
+//print_r($data);
+
+$data_a=json_decode($data,true);
+
+//print_r($data_a);
+
+foreach($data_a as $row){
+    print_r($row);
+}
 
 ?>
