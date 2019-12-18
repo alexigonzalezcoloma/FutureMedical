@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Future_Medical_Inicio</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+
+   <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/jsmind.css" />
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>Future Medical</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"><i class="fas fa-pencil-alt"></i><span>Detalles&nbsp;</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span>Perfil&nbsp;</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="table.html"><i class="fas fa-table"></i><span>Lista de Arquetipos</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="login.html"><i class="far fa-user-circle"></i><span>Login</span></a></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Busque Arquetipo">
+                                <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                            </div>
+                        </form>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1" role="presentation">
+                                <li class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"></a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in" role="menu">
+                                        <h6 class="dropdown-header">alerts center</h6>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="mr-3">
+                                                <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 12, 2019</span>
+                                                <p>A new monthly report is ready to download!</p>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="mr-3">
+                                                <div class="bg-success icon-circle"><i class="fas fa-donate text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 7, 2019</span>
+                                                <p>$290.29 has been deposited into your account!</p>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="mr-3">
+                                                <div class="bg-warning icon-circle"><i class="fas fa-exclamation-triangle text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 2, 2019</span>
+                                                <p>Spending Alert: We've noticed unusually high spending for your account.</p>
+                                            </div>
+                                        </a><a class="text-center dropdown-item small text-gray-500" href="#">Show All Alerts</a></div>
+                                </li>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1" role="presentation">
+                                <li class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"></a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in" role="menu">
+                                        <h6 class="dropdown-header">alerts center</h6>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="assets/img/avatars/avatar4.jpeg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>Hi there! I am wondering if you can help me with a problem I've been having.</span></div>
+                                                <p class="small text-gray-500 mb-0">Emily Fowler - 58m</p>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="assets/img/avatars/avatar2.jpeg">
+                                                <div class="status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>I have the photos that you ordered last month!</span></div>
+                                                <p class="small text-gray-500 mb-0">Jae Chun - 1d</p>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="assets/img/avatars/avatar3.jpeg">
+                                                <div class="bg-warning status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>Last month's report looks great, I am very happy with the progress so far, keep up the good work!</span></div>
+                                                <p class="small text-gray-500 mb-0">Morgan Alvarez - 2d</p>
+                                            </div>
+                                        </a>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="assets/img/avatars/avatar5.jpeg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</span></div>
+                                                <p class="small text-gray-500 mb-0">Chicken the Dog · 2w</p>
+                                            </div>
+                                        </a><a class="text-center dropdown-item small text-gray-500" href="#">Show All Alerts</a></div>
+                                </li>
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown"></div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow" role="presentation">
+                                <li class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar1.jpeg"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in"
+                                        role="menu"><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
+                                        <a
+                                            class="dropdown-item" role="presentation" href="#"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Activity log</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a></div>
+                                </li>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">Arquetipo xxxx</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Descargar arquetipo</a></div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-left-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Enacabezamiento)</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>Nombre de Concepto</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-left-success py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Atribucion</span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>ID- Arquetipo</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="far fa-hand-pointer fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-left-info py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col-xl-9 offset-xl-0 mr-2">
+                                            <div class="text-uppercase text-info font-weight-bold text-xs mb-1"><span>Articulo</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-pager fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-left-warning py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col mr-2">
+                                            <div class="text-uppercase text-warning font-weight-bold text-xs mb-1">
+                                                    <label for="file_input"><h6>Cargar Archivo Json&nbsp;</h6></label>
+                                                    <input href="#" id="file_input" class="file_input" type="file" onchange="open_file()"></input>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-upload fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-xl-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">Arquetipo Version Grafica</h6>
+                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                        
+                                </div>
+                                <div class="card-body">
+
+                                        <section id="intro" class="clearfix">
+                                                <div class="container wrapper">
+                                                  <div id="contenedor-principal">
+                                                      <div class="row botones-nodos">
+                                                          <div class="col-md-12 botones-nodos-2">          
+                                                            <button type="button" id="boton-agregar-nodo" class="btn btn-light" onclick="add_node();">Agregar Nodo</button>
+                                                            <button type="button" id="boton-eliminar-nodo" class="btn btn-light" onclick="remove_node();">Eliminar Nodo</button>
+                                                           
+                                                          </div>
+                                                      </div><br>
+                                                      <div class="row contenedor_arq_lista">
+                                                          <div class="cont-arq col-9">
+                                                              <div id="jsmind_container"></div>
+                                                              <div style="display:none">
+                                                                <input class="file" type="file" id="image-chooser" accept="image/*"/>
+                                                              </div>
+                                                         
+                                                              <div>
+                                                                  <script type="text/javascript" src="./js/jsmind.js"></script>
+                                                                  <script type="text/javascript" src="./js/jsmind.draggable.js"></script>
+                                                                  <script type="text/javascript" src="./js/jsmind.screenshot.js"></script>
+                                                                  <script type="text/javascript" src="./js/jsmind_graficador.js"></script>
+                                                              </div>
+                                                          </div>
+                                                          <div class="col-3 cont-list lista-de-datos" id="scrollb">
+                                                              <ul id="app" class="scrollb list-group">
+                                                                  <li id="texto-items" class="items-lista bg-light list-group-item"  v-for="item in items"><span id="texto-arq">Verificacion de ingreso de datos a la Graficadora</span></li>
+                                                              </ul>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                              </section>
+                                              </main>
+
+
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">Carga Xml</h6>
+                                    <div class="dropdown no-arrow">
+
+
+                                </div>
+                                <div class="card-body">
+
+                                        <div class="card">
+                                                <label for="xml_input">Subir</label>
+                                                <input id="xml_input" class="xml_input"type="file" id="xml_input" />
+                                <h3>Contenido del archivo:</h3>
+                                <pre id="contenido-archivo"></pre>
+                                <section id="contenedor" style='border:solid 1px black; height: 100px;'>
+                                <button id="generar">Generar Doc</button>
+                                            </div>
+
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"></div>
+            </div>
+        </div>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>Universidad Catolica de temuco &nbsp;- Taller de Integracion IV - Fernando Castillo &nbsp;- Alexi Gonzalez&nbsp;</span></div>
+            </div>
+        </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/mobile-nav/mobile-nav.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <script src='vue.js'></script>
+  <script type="text/javascript" src="test.js"></script>
+
+ 
+ <script type="text/javascript">
+ 
+     function parseXml(xml) {
+     var dom = null;
+     if (window.DOMParser) {
+         try { 
+             dom = (new DOMParser()).parseFromString(xml, "text/xml"); 
+         } 
+         catch (e) { dom = null; }
+     }
+     else if (window.ActiveXObject) {
+         try {
+             dom = new ActiveXObject('Microsoft.XMLDOM');
+             dom.async = false;
+             if (!dom.loadXML(xml)) // parse error ..
+ 
+                 window.alert(dom.parseError.reason + dom.parseError.srcText);
+         } 
+         catch (e) { dom = null; }
+     }
+     else
+         alert("cannot parse xml string!");
+     return dom;
+     }
+ 
+     function xml2json(xml, tab) {
+        var X = {
+           toObj: function(xml) {
+              var o = {};
+              if (xml.nodeType==1) {   // element node ..
+                 if (xml.attributes.length)   // element with attributes  ..
+                    for (var i=0; i<xml.attributes.length; i++)
+                       o["@"+xml.attributes[i].nodeName] = (xml.attributes[i].nodeValue||"").toString();
+                 if (xml.firstChild) { // element has child nodes ..
+                    var textChild=0, cdataChild=0, hasElementChild=false;
+                    for (var n=xml.firstChild; n; n=n.nextSibling) {
+                       if (n.nodeType==1) hasElementChild = true;
+                       else if (n.nodeType==3 && n.nodeValue.match(/[^ \f\n\r\t\v]/)) textChild++; // non-whitespace text
+                       else if (n.nodeType==4) cdataChild++; // cdata section node
+                    }
+                    if (hasElementChild) {
+                       if (textChild < 2 && cdataChild < 2) { // structured element with evtl. a single text or/and cdata node ..
+                          X.removeWhite(xml);
+                          for (var n=xml.firstChild; n; n=n.nextSibling) {
+                             if (n.nodeType == 3)  // text node
+                                o["#text"] = X.escape(n.nodeValue);
+                             else if (n.nodeType == 4)  // cdata node
+                                o["#cdata"] = X.escape(n.nodeValue);
+                             else if (o[n.nodeName]) {  // multiple occurence of element ..
+                                if (o[n.nodeName] instanceof Array)
+                                   o[n.nodeName][o[n.nodeName].length] = X.toObj(n);
+                                else
+                                   o[n.nodeName] = [o[n.nodeName], X.toObj(n)];
+                             }
+                             else  // first occurence of element..
+                                o[n.nodeName] = X.toObj(n);
+                          }
+                       }
+                       else { // mixed content
+                          if (!xml.attributes.length)
+                             o = X.escape(X.innerXml(xml));
+                          else
+                             o["#text"] = X.escape(X.innerXml(xml));
+                       }
+                    }
+                    else if (textChild) { // pure text
+                       if (!xml.attributes.length)
+                          o = X.escape(X.innerXml(xml));
+                       else
+                          o["#text"] = X.escape(X.innerXml(xml));
+                    }
+                    else if (cdataChild) { // cdata
+                       if (cdataChild > 1)
+                          o = X.escape(X.innerXml(xml));
+                       else
+                          for (var n=xml.firstChild; n; n=n.nextSibling)
+                             o["#cdata"] = X.escape(n.nodeValue);
+                    }
+                 }
+                 if (!xml.attributes.length && !xml.firstChild) o = null;
+              }
+              else if (xml.nodeType==9) { // document.node
+                 o = X.toObj(xml.documentElement);
+              }
+              else
+                 alert("unhandled node type: " + xml.nodeType);
+              return o;
+           },
+           toJson: function(o, name, ind) {
+              var json = name ? ("\""+name+"\"") : "";
+              if (o instanceof Array) {
+                 for (var i=0,n=o.length; i<n; i++)
+                    o[i] = X.toJson(o[i], "", ind+"\t");
+                 json += (name?":[":"[") + (o.length > 1 ? ("\n"+ind+"\t"+o.join(",\n"+ind+"\t")+"\n"+ind) : o.join("")) + "]";
+              }
+              else if (o == null)
+                 json += (name&&":") + "null";
+              else if (typeof(o) == "object") {
+                 var arr = [];
+                 for (var m in o)
+                    arr[arr.length] = X.toJson(o[m], m, ind+"\t");
+                 json += (name?":{":"{") + (arr.length > 1 ? ("\n"+ind+"\t"+arr.join(",\n"+ind+"\t")+"\n"+ind) : arr.join("")) + "}";
+              }
+              else if (typeof(o) == "string")
+                 json += (name&&":") + "\"" + o.toString() + "\"";
+              else
+                 json += (name&&":") + o.toString();
+              return json;
+           },
+           innerXml: function(node) {
+              var s = ""
+              if ("innerHTML" in node)
+                 s = node.innerHTML;
+              else {
+                 var asXml = function(n) {
+                    var s = "";
+                    if (n.nodeType == 1) {
+                       s += "<" + n.nodeName;
+                       for (var i=0; i<n.attributes.length;i++)
+                          s += " " + n.attributes[i].nodeName + "=\"" + (n.attributes[i].nodeValue||"").toString() + "\"";
+                       if (n.firstChild) {
+                          s += ">";
+                          for (var c=n.firstChild; c; c=c.nextSibling)
+                             s += asXml(c);
+                          s += "</"+n.nodeName+">";
+                       }
+                       else
+                          s += "/>";
+                    }
+                    else if (n.nodeType == 3)
+                       s += n.nodeValue;
+                    else if (n.nodeType == 4)
+                       s += "<![CDATA[" + n.nodeValue + "]]>";
+                    return s;
+                 };
+                 for (var c=node.firstChild; c; c=c.nextSibling)
+                    s += asXml(c);
+              }
+              return s;
+           },
+           escape: function(txt) {
+              return txt.replace(/[\\]/g, "\\\\")
+                        .replace(/[\"]/g, '\\"')
+                        .replace(/[\n]/g, '\\n')
+                        .replace(/[\r]/g, '\\r');
+           },
+           removeWhite: function(e) {
+              e.normalize();
+              for (var n = e.firstChild; n; ) {
+                 if (n.nodeType == 3) {  // text node
+                    if (!n.nodeValue.match(/[^ \f\n\r\t\v]/)) { // pure whitespace text node
+                       var nxt = n.nextSibling;
+                       e.removeChild(n);
+                       n = nxt;
+                    }
+                    else
+                       n = n.nextSibling;
+                 }
+                 else if (n.nodeType == 1) {  // element node
+                    X.removeWhite(n);
+                    n = n.nextSibling;
+                 }
+                 else                      // any other node
+                    n = n.nextSibling;
+              }
+              return e;
+           }
+        };
+        if (xml.nodeType == 9) // document node
+           xml = xml.documentElement;
+        var json = X.toJson(X.toObj(X.removeWhite(xml)), xml.nodeName, "\t");
+        return "{\n" + tab + (tab ? json.replace(/\t/g, tab) : json.replace(/\t|\n/g, "")) + "\n}";
+     }
+     
+     //var  docum_json='';
+ 
+     function leerArchivo(e) {
+     var archivo = e.target.files[0];
+     if (!archivo) {
+         return;
+     }
+     var lector = new FileReader();
+     lector.onload = function(e) {
+         var contenido = e.target.result;
+         var docum_json=xml2json(parseXml(contenido));
+         var res='';
+         res+=docum_json.replace("undefined","");
+         
+         mostrarContenido(res);
+ 
+ 
+         $('#generar').click (function(){
+         $("#contenedor").load("transformar.php",{soy_la_variable: res});
+         });
+     };
+     lector.readAsText(archivo);
+     }
+ 
+     function mostrarContenido(contenido) {
+     var elemento = document.getElementById('contenido-archivo');
+     elemento.innerHTML = contenido;
+     }
+ 
+     document.getElementById('file-input')
+     .addEventListener('change', leerArchivo, false);	
+ 
+     
+ </script>
+   
+</body>
+
+</html>
