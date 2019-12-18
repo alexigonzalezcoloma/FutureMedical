@@ -1,0 +1,13 @@
+<Clientes>
+  <Cliente ID="283">
+  	<Nombre>Juan Carlos Crespin</Nombre>
+	<Direccion verificada="si">
+            <Calle>Avda Perú</Calle>
+            <Numero>235</Numero>
+	    <Ciudad>Bahía Blanca</Ciudad>
+	    <Provincia>Buenos Aires</Provincia>
+	    <CodigoPostal>8000</CodigoPostal>
+            <Pais>Argentina</Pais>
+         </Direccion>
+  </Cliente>
+</Clientes>
