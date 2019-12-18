@@ -1,0 +1,54 @@
+{"meta":{
+        "name":"jNOMBREARQ",
+        "author":"hizzgdev@163.com",
+        "version":"0.2"
+    },
+    "format":"node_tree",
+	"data":{"id":"root","topic":"ARquetiposql","children":[
+		{"id":"action","topic":"action","children":[
+			{"id":"Care Plan", 
+			"topic":"Plan or sequence of discrete activities developed to achieve a specified management goal or treatment outcome, carried out by health professionals and/or the patient."},
+			{"id":"Care Plan Name", 
+			"topic":"Name of care plan."},
+			{"id":"Care plan Need Identified", 
+			"topic":"Need for a care plan has been identified."},
+			{"id":"Care Plan Commenced", 
+			"topic":"Care plan activities commenced and in progress."},
+			{"id":"Care Plan Developed", 
+			"topic":"Care plan components identified and documented."},
+			{"id":"Care Plan Expired", 
+			"topic":"Care plan duration has passed the 'Expiry Date'."},
+			{"id":"Subjectively increased", "topic":"holatest"}
+		]},
+		{"id":"action2","topic":"action2","children":[
+			{"id":"Care Plan2", 
+			"topic":"Plan or sequence of discrete activities developed to achieve a specified management goal or treatment outcome, carried out by health professionals and/or the patient."},
+			{"id":"Care Plan Name2", 
+			"topic":"Name of care plan.2"},
+			{"id":"Care plan Need Identified", 
+			"topic":"Need for a care plan has been identified."},
+			{"id":"Care Plan Commenced2", 
+			"topic":"Care plan activities commenced and in progress."},
+			{"id":"Care Plan Developed2", 
+			"topic":"Care plan components identified and documented."},
+			{"id":"Care Plan Expired", 
+			"topic":"Care plan duration has passed the 'Expiry Date'."},
+			{"id":"Subjectively increased", "topic":"holatest"}
+		]},
+		{"id":"action3","topic":"action2","children":[
+			{"id":"Care Plan3", 
+			"topic":"Plan or sequence of discrete activities developed to achieve a specified management goal or treatment outcome, carried out by health professionals and/or the patient."},
+			{"id":"Care Plan Name3", 
+			"topic":"Name of care plan.2"},
+			{"id":"Care plan Need Identified", 
+			"topic":"Need for a care plan has been identified."},
+			{"id":"Care Plan Commenced2", 
+			"topic":"Care plan activities commenced and in progress."},
+			{"id":"Care Plan Developed2", 
+			"topic":"Care plan components identified and documented."},
+			{"id":"Care Plan Expired", 
+			"topic":"Care plan duration has passed the 'Expiry Date'."},
+			{"id":"Subjectively increased", "topic":"holatest"}
+		]}
+	]}
+}

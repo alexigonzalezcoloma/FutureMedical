@@ -1,0 +1,67 @@
+.separador{
+	height: 37px;
+}
+.nav-item:hover{
+	background-color: #04348a ;
+}
+.contenido{
+	height: 100%;
+}
+body{
+	height:100%;
+}
+.pestaña{
+	background-color: red;
+}
+.arq{
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+#barra-navegacion{
+	background-color: #FFFFFF;
+}
+
+#contenedor-todo{
+	margin-top: 30px !important;
+}
+
+#diagrama{
+	margin-right: 4px !important;
+}
+
+#scrollb::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#scrollb::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#scrollb::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#4D9C41),
+									   to(#19911D),
+									   color-stop(.6,#54DE5D))
+}
+
+#scrollb{
+	background-color: #FFFFFF;
+}
+
+td{
+	background-color: #353942;
+	margin: 10px;
+}

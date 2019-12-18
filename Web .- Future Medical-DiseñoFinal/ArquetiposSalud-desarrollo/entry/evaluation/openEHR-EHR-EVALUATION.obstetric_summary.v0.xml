@@ -1,0 +1,2198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype xmlns="http://schemas.openehr.org/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <original_language>
+    <terminology_id>
+      <value>ISO_639-1</value>
+    </terminology_id>
+    <code_string>en</code_string>
+  </original_language>
+  <is_controlled>false</is_controlled>
+  <description>
+    <original_author id="date">2011-02-24</original_author>
+    <original_author id="name">Sam Heard</original_author>
+    <original_author id="organisation">Ocean Informatics</original_author>
+    <original_author id="email">sam.heard@oceaninformatics.com</original_author>
+    <other_contributors>Sheryl Alexander, NT Department of Health, Australia</other_contributors>
+    <other_contributors>Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)</other_contributors>
+    <other_contributors>Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)</other_contributors>
+    <other_contributors>SB Bhattacharyya, Sudisa Consultancy Services, India</other_contributors>
+    <other_contributors>Margaret Cotter, AMSANT, Australia</other_contributors>
+    <other_contributors>Michelle Dowden, Miwatj Health Ngalkanbuy Health, Australia</other_contributors>
+    <other_contributors>Shahla Foozonkhah, Iran ministry of health and education, Iran</other_contributors>
+    <other_contributors>Tim Garden, NTG Department of Health, Australia</other_contributors>
+    <other_contributors>Heather Grain, Llewelyn Grain Informatics, Australia</other_contributors>
+    <other_contributors>Mikkel Gaup Grønmo, Helse-Nord, Norway (openEHR Editor)</other_contributors>
+    <other_contributors>Sam Heard, Ocean Informatics, Australia (Editor)</other_contributors>
+    <other_contributors>Evelyn Hovenga, EJSH Consulting, Australia</other_contributors>
+    <other_contributors>Michelle Kealy, Australia</other_contributors>
+    <other_contributors>Bernadette Lack, Deptartment of Health, NT, Australia</other_contributors>
+    <other_contributors>Heather Leslie, Atomica Informatics, Australia (openEHR Editor)</other_contributors>
+    <other_contributors>Ian McNicoll, Ocean Informatics UK, United Kingdom</other_contributors>
+    <other_contributors>Paul Miller, SCIMP NHS Scotland, United Kingdom</other_contributors>
+    <other_contributors>rogerio neri, soft &amp; solutions, Brazil</other_contributors>
+    <other_contributors>Jeremy Oats, NT Health, Australia</other_contributors>
+    <other_contributors>Andrej Orel, Marand d.o.o., Slovenia</other_contributors>
+    <other_contributors>Jayashree Panickar, Karolinska Institute, Sweden</other_contributors>
+    <other_contributors>Gary Sinclair, NT DoH, Australia</other_contributors>
+    <other_contributors>Norwegian Review Summary, Nasjonal IKT HF, Norway</other_contributors>
+    <other_contributors>John Tore Valand, Helse Bergen, Norway (openEHR Editor)</other_contributors>
+    <other_contributors>Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)</other_contributors>
+    <other_contributors>Cherie Whitbread, Royal Darwin Hospital, Australia</other_contributors>
+    <other_contributors>Jo Wright, NT Dept of Health, Australia</other_contributors>
+    <lifecycle_state>in_development</lifecycle_state>
+    <other_details id="licence">This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.</other_details>
+    <other_details id="custodian_organisation">openEHR Foundation</other_details>
+    <other_details id="references">Obstetric Summary, Draft Archetype [Internet]. Australian Digital Health Agency, Australia, ADHA Clinical Knowledge Manager [2011 Aug 17]. Available from: http://dcm.nehta.org.au/ckm/OKM.html#showArchetype_1013.1.971_4 (now discontinued).</other_details>
+    <other_details id="original_namespace">org.openehr</other_details>
+    <other_details id="original_publisher">openEHR Foundation</other_details>
+    <other_details id="custodian_namespace">org.openehr</other_details>
+    <other_details id="MD5-CAM-1.0.1">4EA0B258C8AA167001DED00A4A6B398C</other_details>
+    <other_details id="build_uid">48062944-5875-40fd-8dda-dfbf1219693b</other_details>
+    <other_details id="revision">0.0.1-alpha</other_details>
+    <details>
+      <language>
+        <terminology_id>
+          <value>ISO_639-1</value>
+        </terminology_id>
+        <code_string>nb</code_string>
+      </language>
+      <purpose>For å registrere et sammendrag eller varig (persistent) informasjon om en kvinnes obstetriske historie, inkludert en oversikt over av alle svangerskap med tilhørende resultater eller intervensjoner.</purpose>
+      <keywords>obstetrikk</keywords>
+      <keywords>svangerskap</keywords>
+      <keywords>parietet</keywords>
+      <keywords>gravida</keywords>
+      <keywords>para</keywords>
+      <keywords>svangerskapsavbrudd</keywords>
+      <keywords>spontanabort</keywords>
+      <keywords>aborter</keywords>
+      <keywords>spontan</keywords>
+      <keywords>levende</keywords>
+      <keywords>fødsler</keywords>
+      <keywords>dødfødsler</keywords>
+      <keywords>keisersnitt</keywords>
+      <keywords>ekstrauterin graviditet</keywords>
+      <keywords>neonatal</keywords>
+      <keywords>død</keywords>
+      <keywords>levende</keywords>
+      <keywords>multippel</keywords>
+      <keywords>missed abortion</keywords>
+      <keywords>provosert abort</keywords>
+      <keywords>ektopisk</keywords>
+      <keywords>extrauterin</keywords>
+      <keywords>ekstrauterin</keywords>
+      <keywords>svangerskapshistorikk</keywords>
+      <keywords>fødsel</keywords>
+      <use>Brukes for å registrere et sammendrag eller varig (persistent) informasjon om en kvinnes obstetriske historie, inkludert en oversikt over av alle svangerskap med tilhørende resultater eller intervensjoner.&#xD;
+&#xD;
+Intensjonene med denne arketypen er å gi et øyeblikksbilde (snapshot view) av alle svangerskapene til en kvinne. Den kan brukes som en komponent inn i en nåværende svangerskaps dokumentasjon, som grunnlag for å rapportere data til ulike registre eller til å gi klinisk beslutningsstøtte. &#xD;
+&#xD;
+Brukes for å registrere en TPAL oversikt over kvinnens obstetriske anamnese, Fødsler til termin (T), Premature fødsler (P), Aborter (A), Levende barn (L). Noen varianter bruker Gravida (G) og antall Flerlingefødsler (M).&#xD;
+&#xD;
+Definisjonen for noen av disse dataelementene vil variere mellom myndighetsområder, det er derfor mulig å legge til definisjonen i Protocol-delen av arketypen. Dette er viktig dersom utveksling av data forekommer mellom myndighetsområder.&#xD;
+&#xD;
+Noen data kan bli kalkulert ut fra, eller hentet fra andre svangerskapsjournaler dersom disse er tilgjengelige.</use>
+      <misuse>Brukes ikke for å dokumentere informasjon om ett enkelt svangerskap. Bruk EVALUATION.pregnancy_summary til det formålet.&#xD;
+&#xD;
+Brukes ikke for å dokumentere informasjon for hvert enkelt svangerskap, abort (spontan, missed abortion, provosert)/svangerskapsavbrudd eller fødsel. Bruk arketypen ACTION.procedure (Prosedyre) for dette formålet.&#xD;
+&#xD;
+Brukes ikke for å registrere detaljer om funn under hver enkelt svangerskapskontroll eller under fødsel. Dette registreres i egne arketyper for dette formålet som for eksempel: OBSERVATION.story (Anamnese) sammen med CLUSTER.symptom_sign (Symptom/sykdomstegn), OBSERVATION.blood_pressure (Blodtrykk), OBSERVATION.urinalysis (Urinanalyse) eller EVALUATION.problem_diagnosis (Problem/diagnose).</misuse>
+      <copyright />
+    </details>
+    <details>
+      <language>
+        <terminology_id>
+          <value>ISO_639-1</value>
+        </terminology_id>
+        <code_string>pt-br</code_string>
+      </language>
+      <purpose>Para gravar uma visão geral sobre a história obstétrica de uma mulher para fins de: fornecimento de um informações de sua história obstétrica, para reportar a órgãos oficiais ou para apoio à decisão clínica.</purpose>
+      <keywords>Obstétrico</keywords>
+      <keywords>Gravidez</keywords>
+      <keywords>Paridade</keywords>
+      <keywords>Gestante</keywords>
+      <keywords>Gravida</keywords>
+      <keywords>Abortamento induzido</keywords>
+      <keywords>Aborto espontâneo</keywords>
+      <keywords>Espontâneo</keywords>
+      <keywords>Vivo</keywords>
+      <keywords>Nascimentos</keywords>
+      <keywords>Natimorto</keywords>
+      <keywords>Cesariana</keywords>
+      <keywords>Ectópica</keywords>
+      <keywords>Neonatal</keywords>
+      <keywords>Morte</keywords>
+      <keywords>Tubária</keywords>
+      <keywords>Vivo</keywords>
+      <keywords>Múltiplo</keywords>
+      <use>Usar para registrar o panorama da história obstétrica de uma mulher, incluindo um resumo de todas as gestações e os resultados ou intervenções associadas.&#xD;
+&#xD;
+Utilizar, se adequado, como a base de relatórios legais sobre nascimentos.&#xD;
+&#xD;
+Usar para registrar a visão geral de uma história obstétrica, se necessário - o número de nascimentos a termo, nascimento prematuro, abortos e nascidos vivos. Algumas variações adicionam o número de gestações e o número de nascimentos múltiplos.&#xD;
+&#xD;
+Alguns dados podem ser calculados ou derivados de registros de gravidez individuais, se disponíveis.&#xD;
+</use>
+      <misuse>Não utilizar para registrar informações de resumo sobre uma única gravidez – neste caso utilize EVALUATION.pregnancy_summary.&#xD;
+&#xD;
+Não utilizar para registrar informações detalhadas sobre episódios individuais de gravidez, abortos ou partos. Estas informação deverão ser registradas através de arquétipos específicos, baseados nos dados do evento.&#xD;
+</misuse>
+      <copyright>© openEHR Foundation</copyright>
+    </details>
+    <details>
+      <language>
+        <terminology_id>
+          <value>ISO_639-1</value>
+        </terminology_id>
+        <code_string>en</code_string>
+      </language>
+      <purpose>To record summary or persistent information about the obstetric history of a woman, including a overview of all pregnancies and the associated outcomes or interventions.</purpose>
+      <keywords>obstetric</keywords>
+      <keywords>pregnancy</keywords>
+      <keywords>parity</keywords>
+      <keywords>para</keywords>
+      <keywords>gravidity</keywords>
+      <keywords>gravida</keywords>
+      <keywords>termination</keywords>
+      <keywords>miscarriage</keywords>
+      <keywords>abortions</keywords>
+      <keywords>spontaneous</keywords>
+      <keywords>live</keywords>
+      <keywords>birth</keywords>
+      <keywords>stillbirth</keywords>
+      <keywords>caesarean</keywords>
+      <keywords>ectopic</keywords>
+      <keywords>neonatal</keywords>
+      <keywords>death</keywords>
+      <keywords>tubal</keywords>
+      <keywords>living</keywords>
+      <use>Use to record summary or persistent information about the obstetric history of a woman, including a overview of all pregnancies and the associated outcomes or interventions.&#xD;
+&#xD;
+The intent of this archetype is to provide a snapshot view about all of a woman's pregnancies. It may be used as a component of a current pregnancy record, as part of reporting to statutory bodies or to drive clinical decision support.&#xD;
+&#xD;
+Use to record the TPAL overview of an obstetric history, if required - the numbers of Term Births (T), Preterm Births (P), Abortions (A) and Living Children (L). Some variations add Gravidity (G) and number of Multiple Births (M). &#xD;
+&#xD;
+In many jurisdictions, the definition of some of these data elements may vary. For this reason, definitions may be included in the Protocol to ensure clarity of intent especially if the data is being exchanged between jurisdictions.&#xD;
+&#xD;
+Some data may be calculated or derived from individual pregnancy records if these are available.</use>
+      <misuse>Not for recording summary information about a single pregnancy - use EVALUATION. pregnancy_summary for this purpose.&#xD;
+&#xD;
+Not for recording detailed information about each of the individual pregnancies, miscarriages, terminations, or deliveries. Use the ACTION.procedure archetype for this purpose.&#xD;
+&#xD;
+Not to be used to record the details about findings in each antenatal visits or during labour. This data should be used recorded using appropriate archetypes for this purpose such as OBSERVATION.story together with CLUSTER.symptom_sign; OBSERVATION.blood pressure; OBSERVATION.urinalysis; or EVALUATION.problem_diagnosis.</misuse>
+      <copyright>© openEHR Foundation</copyright>
+    </details>
+    <details>
+      <language>
+        <terminology_id>
+          <value>ISO_639-1</value>
+        </terminology_id>
+        <code_string>es-co</code_string>
+      </language>
+      <purpose>Sirve para registrar una visión general sobre la historia obstétrica de una mujer con fines de: proporcionar un resumen de su historia obstétrica, la presentación de informes a los órganos estatutarios o el apoyo de soporte de decisiones clínicas</purpose>
+      <keywords>Obstétrica</keywords>
+      <keywords>Eembarazo</keywords>
+      <keywords>Paridad</keywords>
+      <keywords>Gesta</keywords>
+      <keywords>Parto</keywords>
+      <keywords>terminacion</keywords>
+      <keywords>abortos involuntarios</keywords>
+      <keywords>abortos</keywords>
+      <keywords>Espontánea</keywords>
+      <keywords>Vivo</keywords>
+      <keywords>nacimientos</keywords>
+      <keywords>mortinatos</keywords>
+      <keywords>Cesárea</keywords>
+      <keywords>Ectópico</keywords>
+      <keywords>Neonatal</keywords>
+      <keywords>muerte</keywords>
+      <keywords>Múltiple</keywords>
+      <use>Sirve para registrar una visión general sobre la historia obstétrica de una mujer, incluyendo un resumen de todos los embarazos.&#xD;
+&#xD;
+Utilice este resmen como base para informes legales con respecto a los nacimientos .&#xD;
+&#xD;
+Se utiliza para registrar la información general de una historia obstétrica, si es necesario - el número de nacimientos a termino (T) , los nacimientos prematuros (P) , Abortos (A) y niños que viven (L) . Algunas variaciones añaden Gravidez (G) y el número de nacimientos múltiples (M) .&#xD;
+&#xD;
+Algunos datos pueden ser calculados o derivados de los registros individuales de embarazo, si están disponibles.</use>
+      <misuse>No es para registrar la información del embarazo actual - utilice el arquetipo EVALUACIÓN. pregnancy_summary para este propósito.&#xD;
+&#xD;
+No es para registrar la información detallada sobre cada uno de los individuales embarazos, abortos involuntarios , Embarazos interrumpidos, o nacimientos. Esta información se registra utilizando otros arquetipos específicos como datos basados ​​en eventos .</misuse>
+      <copyright>© openEHR Foundation</copyright>
+    </details>
+  </description>
+  <translations>
+    <language>
+      <terminology_id>
+        <value>ISO_639-1</value>
+      </terminology_id>
+      <code_string>nb</code_string>
+    </language>
+    <author id="name">Marit Alice Venheim</author>
+    <author id="organisation">Helse Vest IKT AS</author>
+    <author id="email">marit.alice.venheim@helse-vest-ikt.no</author>
+  </translations>
+  <translations>
+    <language>
+      <terminology_id>
+        <value>ISO_639-1</value>
+      </terminology_id>
+      <code_string>pt-br</code_string>
+    </language>
+    <author id="name">Marivan Abrahão, Gabriela Alves, Adriana Kitajima e Maria Ângela Scatena</author>
+    <author id="organisation">Core Consulting</author>
+    <author id="email">contato@coreconsulting.com.br</author>
+    <accreditation>Hospital Alemão Oswaldo Cruz (HAOC)</accreditation>
+  </translations>
+  <translations>
+    <language>
+      <terminology_id>
+        <value>ISO_639-1</value>
+      </terminology_id>
+      <code_string>es-co</code_string>
+    </language>
+    <author id="name">Francisco Ramirez ante</author>
+    <author id="organisation">SITIS SAS</author>
+    <author id="email">framirez74@gmail.com</author>
+    <accreditation>Ingeniero de Sistemas</accreditation>
+  </translations>
+  <uid>
+    <value>73666d7d-d7d0-460d-87a3-ed2e68f87fad</value>
+  </uid>
+  <archetype_id>
+    <value>openEHR-EHR-EVALUATION.obstetric_summary.v0</value>
+  </archetype_id>
+  <adl_version>1.4</adl_version>
+  <concept>at0000</concept>
+  <definition>
+    <rm_type_name>EVALUATION</rm_type_name>
+    <occurrences>
+      <lower_included>true</lower_included>
+      <upper_included>true</upper_included>
+      <lower_unbounded>false</lower_unbounded>
+      <upper_unbounded>false</upper_unbounded>
+      <lower>1</lower>
+      <upper>1</upper>
+    </occurrences>
+    <node_id>at0000</node_id>
+    <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+      <rm_attribute_name>data</rm_attribute_name>
+      <existence>
+        <lower_included>true</lower_included>
+        <upper_included>true</upper_included>
+        <lower_unbounded>false</lower_unbounded>
+        <upper_unbounded>false</upper_unbounded>
+        <lower>1</lower>
+        <upper>1</upper>
+      </existence>
+      <children xsi:type="C_COMPLEX_OBJECT">
+        <rm_type_name>ITEM_TREE</rm_type_name>
+        <occurrences>
+          <lower_included>true</lower_included>
+          <upper_included>true</upper_included>
+          <lower_unbounded>false</lower_unbounded>
+          <upper_unbounded>false</upper_unbounded>
+          <lower>1</lower>
+          <upper>1</upper>
+        </occurrences>
+        <node_id>at0001</node_id>
+        <attributes xsi:type="C_MULTIPLE_ATTRIBUTE">
+          <rm_attribute_name>items</rm_attribute_name>
+          <existence>
+            <lower_included>true</lower_included>
+            <upper_included>true</upper_included>
+            <lower_unbounded>false</lower_unbounded>
+            <upper_unbounded>false</upper_unbounded>
+            <lower>1</lower>
+            <upper>1</upper>
+          </existence>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0025</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_TEXT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0002</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0003</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0015</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0016</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0017</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0004</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0005</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0011</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>10</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0012</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0006</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0010</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0018</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0007</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_COUNT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+                <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+                  <rm_attribute_name>magnitude</rm_attribute_name>
+                  <existence>
+                    <lower_included>true</lower_included>
+                    <upper_included>true</upper_included>
+                    <lower_unbounded>false</lower_unbounded>
+                    <upper_unbounded>false</upper_unbounded>
+                    <lower>1</lower>
+                    <upper>1</upper>
+                  </existence>
+                  <children xsi:type="C_PRIMITIVE_OBJECT">
+                    <rm_type_name>INTEGER</rm_type_name>
+                    <occurrences>
+                      <lower_included>true</lower_included>
+                      <upper_included>true</upper_included>
+                      <lower_unbounded>false</lower_unbounded>
+                      <upper_unbounded>false</upper_unbounded>
+                      <lower>1</lower>
+                      <upper>1</upper>
+                    </occurrences>
+                    <node_id />
+                    <item xsi:type="C_INTEGER">
+                      <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>false</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>0</lower>
+                        <upper>100</upper>
+                      </range>
+                    </item>
+                  </children>
+                </attributes>
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0026</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_TEXT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <cardinality>
+            <is_ordered>false</is_ordered>
+            <is_unique>false</is_unique>
+            <interval>
+              <lower_included>true</lower_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>true</upper_unbounded>
+              <lower>0</lower>
+            </interval>
+          </cardinality>
+        </attributes>
+      </children>
+    </attributes>
+    <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+      <rm_attribute_name>protocol</rm_attribute_name>
+      <existence>
+        <lower_included>true</lower_included>
+        <upper_included>true</upper_included>
+        <lower_unbounded>false</lower_unbounded>
+        <upper_unbounded>false</upper_unbounded>
+        <lower>1</lower>
+        <upper>1</upper>
+      </existence>
+      <children xsi:type="C_COMPLEX_OBJECT">
+        <rm_type_name>ITEM_TREE</rm_type_name>
+        <occurrences>
+          <lower_included>true</lower_included>
+          <upper_included>true</upper_included>
+          <lower_unbounded>false</lower_unbounded>
+          <upper_unbounded>false</upper_unbounded>
+          <lower>1</lower>
+          <upper>1</upper>
+        </occurrences>
+        <node_id>at0008</node_id>
+        <attributes xsi:type="C_MULTIPLE_ATTRIBUTE">
+          <rm_attribute_name>items</rm_attribute_name>
+          <existence>
+            <lower_included>true</lower_included>
+            <upper_included>true</upper_included>
+            <lower_unbounded>false</lower_unbounded>
+            <upper_unbounded>false</upper_unbounded>
+            <lower>1</lower>
+            <upper>1</upper>
+          </existence>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0009</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_DATE_TIME</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0022</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_TEXT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0019</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_TEXT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0020</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_TEXT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0021</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_TEXT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0027</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_TEXT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0028</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_TEXT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0013</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_TEXT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="C_COMPLEX_OBJECT">
+            <rm_type_name>ELEMENT</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <upper_included>true</upper_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>false</upper_unbounded>
+              <lower>0</lower>
+              <upper>1</upper>
+            </occurrences>
+            <node_id>at0023</node_id>
+            <attributes xsi:type="C_SINGLE_ATTRIBUTE">
+              <rm_attribute_name>value</rm_attribute_name>
+              <existence>
+                <lower_included>true</lower_included>
+                <upper_included>true</upper_included>
+                <lower_unbounded>false</lower_unbounded>
+                <upper_unbounded>false</upper_unbounded>
+                <lower>1</lower>
+                <upper>1</upper>
+              </existence>
+              <children xsi:type="C_COMPLEX_OBJECT">
+                <rm_type_name>DV_TEXT</rm_type_name>
+                <occurrences>
+                  <lower_included>true</lower_included>
+                  <upper_included>true</upper_included>
+                  <lower_unbounded>false</lower_unbounded>
+                  <upper_unbounded>false</upper_unbounded>
+                  <lower>1</lower>
+                  <upper>1</upper>
+                </occurrences>
+                <node_id />
+              </children>
+            </attributes>
+          </children>
+          <children xsi:type="ARCHETYPE_SLOT">
+            <rm_type_name>CLUSTER</rm_type_name>
+            <occurrences>
+              <lower_included>true</lower_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>true</upper_unbounded>
+              <lower>0</lower>
+            </occurrences>
+            <node_id>at0024</node_id>
+            <includes>
+              <string_expression>archetype_id/value matches {/.*/}</string_expression>
+              <expression xsi:type="EXPR_BINARY_OPERATOR">
+                <type>Boolean</type>
+                <operator>2007</operator>
+                <precedence_overridden>false</precedence_overridden>
+                <left_operand xsi:type="EXPR_LEAF">
+                  <type>String</type>
+                  <item xsi:type="xsd:string">archetype_id/value</item>
+                  <reference_type>attribute</reference_type>
+                </left_operand>
+                <right_operand xsi:type="EXPR_LEAF">
+                  <type>C_STRING</type>
+                  <item xsi:type="C_STRING">
+                    <pattern>.*</pattern>
+                  </item>
+                  <reference_type>constraint</reference_type>
+                </right_operand>
+              </expression>
+            </includes>
+          </children>
+          <cardinality>
+            <is_ordered>false</is_ordered>
+            <is_unique>false</is_unique>
+            <interval>
+              <lower_included>true</lower_included>
+              <lower_unbounded>false</lower_unbounded>
+              <upper_unbounded>true</upper_unbounded>
+              <lower>0</lower>
+            </interval>
+          </cardinality>
+        </attributes>
+      </children>
+    </attributes>
+  </definition>
+  <ontology>
+    <term_definitions language="en">
+      <items code="at0000">
+        <items id="text">Obstetric summary</items>
+        <items id="description">Summary or persistent information about the obstetric history of a woman, including a overview of all pregnancies and the associated outcomes or interventions.</items>
+      </items>
+      <items code="at0001">
+        <items id="text">Tree</items>
+        <items id="description">@ internal @</items>
+      </items>
+      <items code="at0002">
+        <items id="text">Gravidity (G)</items>
+        <items id="description">Number of times a woman has been pregnant, including a current pregnancy.</items>
+      </items>
+      <items code="at0003">
+        <items id="text">Parity</items>
+        <items id="description">Number of times a woman has given birth.</items>
+        <items id="comment">Parity is not regarded as the same as the number of infants born - for example, twins would be recorded as one birth event. The value recorded for parity should be equal to the sum of 'Term births (T)' and 'Preterm births (P)', if these additional fields are recorded. </items>
+      </items>
+      <items code="at0004">
+        <items id="text">Miscarriages</items>
+        <items id="description">Number of times a woman has had a miscarriage.</items>
+        <items id="comment">The definition of a miscarriage can be recorded in the Protocol.</items>
+      </items>
+      <items code="at0005">
+        <items id="text">Terminations</items>
+        <items id="description">Number of times a woman has had a pregnancy terminated, regardless of gestation.</items>
+        <items id="comment">The definition of a Termination can be recorded in the Protocol.</items>
+      </items>
+      <items code="at0006">
+        <items id="text">Live births</items>
+        <items id="description">Number of infants born alive.</items>
+        <items id="comment">The definition of a live birth can be recorded in the Protocol.</items>
+      </items>
+      <items code="at0007">
+        <items id="text">Living children (L)</items>
+        <items id="description">Number of children who are alive.</items>
+        <items id="comment">The definition of a living child can be recorded in the Protocol. The value for this data element should be accurate at the time of recording, captured using the 'Last updated' data element.</items>
+      </items>
+      <items code="at0008">
+        <items id="text">Tree</items>
+        <items id="description">@ internal @</items>
+      </items>
+      <items code="at0009">
+        <items id="text">Date updated</items>
+        <items id="description">The date this summary was last updated.</items>
+      </items>
+      <items code="at0010">
+        <items id="text">Caesarean sections</items>
+        <items id="description">Number of Caesarean sections performed.</items>
+      </items>
+      <items code="at0011">
+        <items id="text">Ectopic pregnancies</items>
+        <items id="description">Number of ectopic pregnancies.</items>
+      </items>
+      <items code="at0012">
+        <items id="text">Stillbirths</items>
+        <items id="description">Number of stillbirths.</items>
+        <items id="comment">The definition of a stillbirth can be recorded in the Protocol.</items>
+      </items>
+      <items code="at0013">
+        <items id="text">Stillbirth definition</items>
+        <items id="description">The definition of stillbirth that is used in the data collection.</items>
+        <items id="comment">Maybe useful to record when comparing data from different regions as definitions of a stillbirth may vary.</items>
+      </items>
+      <items code="at0015">
+        <items id="text">Term births (T)</items>
+        <items id="description">Number of infants born at term.</items>
+        <items id="comment">The definition of a term birth can be recorded in the Protocol.</items>
+      </items>
+      <items code="at0016">
+        <items id="text">Preterm births (P)</items>
+        <items id="description">Number of infants born before term.</items>
+        <items id="comment">The definition of a preterm birth can be recorded in the Protocol.</items>
+      </items>
+      <items code="at0017">
+        <items id="text">Abortions (A)</items>
+        <items id="description">Number of non-viable pregnancies from all causes and at any gestation, including miscarriages, induced terminations and ectopic pregnancies.</items>
+        <items id="comment">The value recorded for 'Abortions (A)' should be equal to the sum of 'Miscarriages', 'Terminations' and 'Ectopic pregnancies', if these additional fields are recorded.</items>
+      </items>
+      <items code="at0018">
+        <items id="text">Multiple births (M)</items>
+        <items id="description">Number of birth events in which more than one fetus has been born.</items>
+      </items>
+      <items code="at0019">
+        <items id="text">Preterm birth definition</items>
+        <items id="description">The definition of a preterm birth that is used in the data collection.</items>
+        <items id="comment">Maybe useful to record when comparing data from different regions as definitions of a preterm birth may vary.</items>
+      </items>
+      <items code="at0020">
+        <items id="text">Term birth definition</items>
+        <items id="description">The definition of a term birth that is used in the data collection.</items>
+        <items id="comment">Maybe useful to record when comparing data from different regions as definitions of a term birth may vary.</items>
+      </items>
+      <items code="at0021">
+        <items id="text">Miscarriage definition</items>
+        <items id="description">The definition of miscarriage that is used in the data collection.</items>
+        <items id="comment">Depending on local definitions, missed abortions may be captured in this data element. Maybe useful to record when comparing data from different regions as definitions of a miscarriage may vary.</items>
+      </items>
+      <items code="at0022">
+        <items id="text">Parity definition</items>
+        <items id="description">The definition of parity that is used in the data collection.</items>
+        <items id="comment">Maybe useful to record when comparing data from different regions as definitions of parity may vary.</items>
+      </items>
+      <items code="at0023">
+        <items id="text">Living child definition</items>
+        <items id="description">The definition of a living child that is used in the data collection.</items>
+        <items id="comment">Maybe useful to record when comparing data from different regions as definitions of a living child may vary.</items>
+      </items>
+      <items code="at0024">
+        <items id="text">Extension</items>
+        <items id="description">Additional information required to capture local content or to align with other reference models/formalisms.</items>
+        <items id="comment">For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.</items>
+      </items>
+      <items code="at0025">
+        <items id="text">Description</items>
+        <items id="description">Narrative description about the overall obstetric history.</items>
+      </items>
+      <items code="at0026">
+        <items id="text">Comment</items>
+        <items id="description">Additional narrative about the obstetric history, not captured in other fields.</items>
+      </items>
+      <items code="at0027">
+        <items id="text">Termination definition</items>
+        <items id="description">The definition of termination that is used in the data collection.</items>
+        <items id="comment">Maybe useful to record when comparing data from different regions as definitions of a termination may vary.</items>
+      </items>
+      <items code="at0028">
+        <items id="text">Live birth definition</items>
+        <items id="description">The definition of a live birth that is used in the data collection.</items>
+        <items id="comment">Maybe useful to record when comparing data from different regions as definitions of a live birth may vary.</items>
+      </items>
+    </term_definitions>
+    <term_definitions language="pt-br">
+      <items code="at0000">
+        <items id="text">Sumário obstétrico</items>
+        <items id="description">Uma visão geral da história obstétrica de uma mulher, incluindo um resumo de todas as gestações seus resultados ou as intervenções associadas.&#xD;
+&#xD;
+</items>
+      </items>
+      <items code="at0001">
+        <items id="text">Tree</items>
+        <items id="description">@ internal @</items>
+      </items>
+      <items code="at0002">
+        <items id="text">*Gravidity (G)(en)</items>
+        <items id="description">*Number of times a woman has been pregnant, including a current pregnancy. (en)</items>
+      </items>
+      <items code="at0003">
+        <items id="text">*Parity(en)</items>
+        <items id="description">*Number of times a woman has given birth.(en)</items>
+        <items id="comment">*Parity is not regarded as the same as the number of infants born - for example, twins would be recorded as one birth event. The value recorded for parity should be equal to the sum of 'Term births (T)' and 'Preterm births (P)', if these additional fields are recorded.  (en)</items>
+      </items>
+      <items code="at0004">
+        <items id="text">*Miscarriages(en)</items>
+        <items id="description">*Number of times a woman has had a miscarriage.(en)</items>
+        <items id="comment">*The definition of a miscarriage can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0005">
+        <items id="text">Aborto induzido</items>
+        <items id="description">Número de vezes que uma mulher teve uma gravidez terminada, desconsiderando a gestação.</items>
+        <items id="comment">*The definition of a Termination can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0006">
+        <items id="text">*Live births (en)</items>
+        <items id="description">*Number of infants born alive. (en)</items>
+        <items id="comment">*The definition of a live birth can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0007">
+        <items id="text">*Living children (L) (en)</items>
+        <items id="description">*Number of children who are alive. (en)</items>
+        <items id="comment">*The definition of a living child can be recorded in the Protocol. The value for this data element should be accurate at the time of recording, captured using the 'Last updated' data element. (en)</items>
+      </items>
+      <items code="at0008">
+        <items id="text">Tree</items>
+        <items id="description">@ internal @</items>
+      </items>
+      <items code="at0009">
+        <items id="text">*Date updated (en)</items>
+        <items id="description">Data da última atualização do sumário.</items>
+      </items>
+      <items code="at0010">
+        <items id="text">*Caesarean sections (en)</items>
+        <items id="description">Número de cesarianas realizadas.</items>
+      </items>
+      <items code="at0011">
+        <items id="text">*Ectopic pregnancies (en)</items>
+        <items id="description">Número de gravidezes ectópicas.</items>
+      </items>
+      <items code="at0012">
+        <items id="text">*Stillbirths(en)</items>
+        <items id="description">*Number of stillbirths.(en)</items>
+        <items id="comment">*The definition of a stillbirth can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0013">
+        <items id="text">*Stillbirth definition (en)</items>
+        <items id="description">*The definition of stillbirth that is used in the data collection.(en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a stillbirth may vary. (en)</items>
+      </items>
+      <items code="at0015">
+        <items id="text">*Term births (T) (en)</items>
+        <items id="description">*Number of infants born on or after 37 weeks of gestation.(en)</items>
+        <items id="comment">*The definition of a term birth can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0016">
+        <items id="text">*Preterm births (P) (en)</items>
+        <items id="description">*Number of infants born before term. (en)</items>
+        <items id="comment">*The definition of a preterm birth can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0017">
+        <items id="text">Abortos</items>
+        <items id="description">Número de gravidezes não viáveis por todas as causas e em qualquer gestação, incluindo abortos espontâneos, abortos induzidos e gravidezes ectópicas.</items>
+        <items id="comment">*The value recorded for 'Abortions (A)' should be equal to the sum of 'Miscarriages', 'Terminations' and 'Ectopic pregnancies', if these additional fields are recorded. (en)</items>
+      </items>
+      <items code="at0018">
+        <items id="text">*Multiple births (M) (en)</items>
+        <items id="description">Número de eventos de nascimento (partos) nos quais nasceu mais de um feto.</items>
+      </items>
+      <items code="at0019">
+        <items id="text">*Preterm birth definition(en)</items>
+        <items id="description">*The definition of a preterm birth that is used in the data collection.(en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a preterm birth may vary. (en)</items>
+      </items>
+      <items code="at0020">
+        <items id="text">*Term birth definition(en)</items>
+        <items id="description">*The definition of a term birth that is used in the data collection.(en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a term birth may vary. (en)</items>
+      </items>
+      <items code="at0021">
+        <items id="text">*Miscarriage definition(en)</items>
+        <items id="description">*The definition of miscarriage that is used in the data collection.(en)</items>
+        <items id="comment">*Depending on local definitions, missed abortions may be captured in this data element. Maybe useful to record when comparing data from different regions as definitions of a miscarriage may vary. (en)</items>
+      </items>
+      <items code="at0022">
+        <items id="text">*Parity definition(en)</items>
+        <items id="description">*The definition of parity that is used in the data collection.(en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of parity may vary. (en)</items>
+      </items>
+      <items code="at0023">
+        <items id="text">*Living child definition(en)</items>
+        <items id="description">*The definition of a living child that is used in the data collection.(en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a living child may vary. (en)</items>
+      </items>
+      <items code="at0024">
+        <items id="text">*Extension (en)</items>
+        <items id="description">*Additional information required to capture local content or to align with other reference models/formalisms. (en)</items>
+        <items id="comment">*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)</items>
+      </items>
+      <items code="at0025">
+        <items id="text">*Description (en)</items>
+        <items id="description">*Narrative description about the overall obstetric history. (en)</items>
+      </items>
+      <items code="at0026">
+        <items id="text">*Comment (en)</items>
+        <items id="description">*Additional narrative about the obstetric history, not captured in other fields. (en)</items>
+      </items>
+      <items code="at0027">
+        <items id="text">*Termination definition (en)</items>
+        <items id="description">*The definition of termination that is used in the data collection. (en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a termination may vary. (en)</items>
+      </items>
+      <items code="at0028">
+        <items id="text">*Live birth definition (en)</items>
+        <items id="description">*The definition of a live birth that is used in the data collection. (en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a live birth may vary. (en)</items>
+      </items>
+    </term_definitions>
+    <term_definitions language="es-co">
+      <items code="at0000">
+        <items id="text">Antecedentes Obstétricos</items>
+        <items id="description">Una visión general de la historia obstétrica de una mujer, incluyendo un resumen de todos los embarazos.</items>
+      </items>
+      <items code="at0001">
+        <items id="text">Tree</items>
+        <items id="description">@ internal @</items>
+      </items>
+      <items code="at0002">
+        <items id="text">*Gravidity (G)(en)</items>
+        <items id="description">*Number of times a woman has been pregnant, including a current pregnancy. (en)</items>
+      </items>
+      <items code="at0003">
+        <items id="text">*Parity(en)</items>
+        <items id="description">*Number of times a woman has given birth.(en)</items>
+        <items id="comment">*Parity is not regarded as the same as the number of infants born - for example, twins would be recorded as one birth event. The value recorded for parity should be equal to the sum of 'Term births (T)' and 'Preterm births (P)', if these additional fields are recorded.  (en)</items>
+      </items>
+      <items code="at0004">
+        <items id="text">*Miscarriages(en)</items>
+        <items id="description">*Number of times a woman has had a miscarriage.(en)</items>
+        <items id="comment">*The definition of a miscarriage can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0005">
+        <items id="text">Embarazos interrumpidos</items>
+        <items id="description">Número de veces que una mujer ha tenido un embarazo interrumpidos, independientemente de las semanas de gestación</items>
+        <items id="comment">*The definition of a Termination can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0006">
+        <items id="text">*Live births (en)</items>
+        <items id="description">*Number of infants born alive. (en)</items>
+        <items id="comment">*The definition of a live birth can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0007">
+        <items id="text">*Living children (L) (en)</items>
+        <items id="description">*Number of children who are alive. (en)</items>
+        <items id="comment">*The definition of a living child can be recorded in the Protocol. The value for this data element should be accurate at the time of recording, captured using the 'Last updated' data element. (en)</items>
+      </items>
+      <items code="at0008">
+        <items id="text">Tree</items>
+        <items id="description">@ internal @</items>
+      </items>
+      <items code="at0009">
+        <items id="text">*Date updated (en)</items>
+        <items id="description">Fecha de ultima actualización del resumen</items>
+      </items>
+      <items code="at0010">
+        <items id="text">*Caesarean sections (en)</items>
+        <items id="description">Número de Cesáreas realizadas</items>
+      </items>
+      <items code="at0011">
+        <items id="text">*Ectopic pregnancies (en)</items>
+        <items id="description">Número de embarazos ectópicos</items>
+      </items>
+      <items code="at0012">
+        <items id="text">*Stillbirths(en)</items>
+        <items id="description">*Number of stillbirths.(en)</items>
+        <items id="comment">*The definition of a stillbirth can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0013">
+        <items id="text">*Stillbirth definition (en)</items>
+        <items id="description">*The definition of stillbirth that is used in the data collection.(en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a stillbirth may vary. (en)</items>
+      </items>
+      <items code="at0015">
+        <items id="text">*Term births (T) (en)</items>
+        <items id="description">*Number of infants born on or after 37 weeks of gestation.(en)</items>
+        <items id="comment">*The definition of a term birth can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0016">
+        <items id="text">*Preterm births (P) (en)</items>
+        <items id="description">*Number of infants born before term. (en)</items>
+        <items id="comment">*The definition of a preterm birth can be recorded in the Protocol. (en)</items>
+      </items>
+      <items code="at0017">
+        <items id="text">Abortos</items>
+        <items id="description">Número de embarazos no viables por todas las causas y en cualquier edad gestacional , incluyendo abortos involuntarios , Embarazos interrumpidos y embarazos ectópicos</items>
+        <items id="comment">*The value recorded for 'Abortions (A)' should be equal to the sum of 'Miscarriages', 'Terminations' and 'Ectopic pregnancies', if these additional fields are recorded. (en)</items>
+      </items>
+      <items code="at0018">
+        <items id="text">*Multiple births (M) (en)</items>
+        <items id="description">Número de nacimientos en los cuales ha nacido mas de un producto vivo</items>
+      </items>
+      <items code="at0019">
+        <items id="text">*Preterm birth definition(en)</items>
+        <items id="description">*The definition of a preterm birth that is used in the data collection.(en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a preterm birth may vary. (en)</items>
+      </items>
+      <items code="at0020">
+        <items id="text">*Term birth definition(en)</items>
+        <items id="description">*The definition of a term birth that is used in the data collection.(en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a term birth may vary. (en)</items>
+      </items>
+      <items code="at0021">
+        <items id="text">*Miscarriage definition(en)</items>
+        <items id="description">*The definition of miscarriage that is used in the data collection.(en)</items>
+        <items id="comment">*Depending on local definitions, missed abortions may be captured in this data element. Maybe useful to record when comparing data from different regions as definitions of a miscarriage may vary. (en)</items>
+      </items>
+      <items code="at0022">
+        <items id="text">*Parity definition(en)</items>
+        <items id="description">*The definition of parity that is used in the data collection.(en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of parity may vary. (en)</items>
+      </items>
+      <items code="at0023">
+        <items id="text">*Living child definition(en)</items>
+        <items id="description">*The definition of a living child that is used in the data collection.(en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a living child may vary. (en)</items>
+      </items>
+      <items code="at0024">
+        <items id="text">*Extension (en)</items>
+        <items id="description">*Additional information required to capture local content or to align with other reference models/formalisms. (en)</items>
+        <items id="comment">*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)</items>
+      </items>
+      <items code="at0025">
+        <items id="text">*Description (en)</items>
+        <items id="description">*Narrative description about the overall obstetric history. (en)</items>
+      </items>
+      <items code="at0026">
+        <items id="text">*Comment (en)</items>
+        <items id="description">*Additional narrative about the obstetric history, not captured in other fields. (en)</items>
+      </items>
+      <items code="at0027">
+        <items id="text">*Termination definition (en)</items>
+        <items id="description">*The definition of termination that is used in the data collection. (en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a termination may vary. (en)</items>
+      </items>
+      <items code="at0028">
+        <items id="text">*Live birth definition (en)</items>
+        <items id="description">*The definition of a live birth that is used in the data collection. (en)</items>
+        <items id="comment">*Maybe useful to record when comparing data from different regions as definitions of a live birth may vary. (en)</items>
+      </items>
+    </term_definitions>
+    <term_definitions language="nb">
+      <items code="at0000">
+        <items id="text">Obstetrisk sammendrag</items>
+        <items id="description">Sammendrag eller varig (persistent) informasjon om en kvinnes obstetriske historie, inkludert en oversikt over av alle svangerskap med tilhørende resultater eller intervensjoner.</items>
+      </items>
+      <items code="at0001">
+        <items id="text">Tree</items>
+        <items id="description">@ internal @</items>
+      </items>
+      <items code="at0002">
+        <items id="text">Gravida (G)</items>
+        <items id="description">Antall tidligere svangerskap, inkludert gjeldende svangerskap, hvis pågående.</items>
+      </items>
+      <items code="at0003">
+        <items id="text">Para</items>
+        <items id="description">Antall ganger kvinnen har født.</items>
+        <items id="comment">Summen av antall "Fødsler til termin (T)" og "Premature fødsler (P)". Para er ikke det samme antall som fødte barn, for eksempel vil en tvillingfødsel telle som én fødsel.&#xD;
+</items>
+      </items>
+      <items code="at0004">
+        <items id="text">Spontane aborter</items>
+        <items id="description">Antall ganger en kvinne har spontanabortert.</items>
+        <items id="comment">Definisjonen av spontane aborter kan registreres i Protocol-delen av arketypen.</items>
+      </items>
+      <items code="at0005">
+        <items id="text">Provoserte aborter</items>
+        <items id="description">Antall ganger en kvinne har fått uført eller uført en provosert abort, uavhengig av gestasjonsuke.</items>
+        <items id="comment">Definisjonen av provosert abort kan registreres i Protocol-delen av arketypen.</items>
+      </items>
+      <items code="at0006">
+        <items id="text">Levendefødte</items>
+        <items id="description">Antall levende fødte barn.</items>
+        <items id="comment">Definisjonen av levendefødte kan registreres i Protocol-delen av arketypen.</items>
+      </items>
+      <items code="at0007">
+        <items id="text">Levende barn (L)</items>
+        <items id="description">Antall levende barn.</items>
+        <items id="comment">Definisjonen av levende barn kan registreres i Protocol-delen av arketypen. Antallet registrert i dette dataelementet skal være korrekt på tidspunktet arketypen sist ble oppdatert.</items>
+      </items>
+      <items code="at0008">
+        <items id="text">Tree</items>
+        <items id="description">@ internal @</items>
+      </items>
+      <items code="at0009">
+        <items id="text">Dato oppdatert</items>
+        <items id="description">Datoen da det obstetriske sammendraget sist ble oppdatert.</items>
+      </items>
+      <items code="at0010">
+        <items id="text">Keisersnitt</items>
+        <items id="description">Antall keisersnitt utført.</items>
+      </items>
+      <items code="at0011">
+        <items id="text">Ekstrauterine graviditeter</items>
+        <items id="description">Antall svangerskap utenfor livmoren.</items>
+      </items>
+      <items code="at0012">
+        <items id="text">Dødfødsler</items>
+        <items id="description">Antall dødfødsler.</items>
+        <items id="comment">Definisjonen av dødfødsel kan registreres i Protocol-delen av arketypen.</items>
+      </items>
+      <items code="at0013">
+        <items id="text">Dødfødsel definisjon</items>
+        <items id="description">Den anvendte definisjonen på verdien "Dødfødsler" benyttet i datainnsamlingen.</items>
+        <items id="comment">Kan være nyttig når man skal sammenligne data mellom ulike myndighetsområder, da definisjoner av dødfødsel kan variere.</items>
+      </items>
+      <items code="at0015">
+        <items id="text">Fødsler til termin (T)</items>
+        <items id="description">Antall barn født til termin, eller etter.</items>
+        <items id="comment">Definisjonen av fødsler til termin kan registreres i Protocol-delen av arketypen.</items>
+      </items>
+      <items code="at0016">
+        <items id="text">Premature fødsler (P)</items>
+        <items id="description">Antall barn født før termin.</items>
+        <items id="comment">Definisjonen av prematur fødsel kan registreres i Protocol-delen av arketypen.</items>
+      </items>
+      <items code="at0017">
+        <items id="text">Aborter (A)</items>
+        <items id="description">Antall avbrutte svangerskap, uavhengig av årsak og gestasjonsuke. Dette inkluderer spontanaborter, provoserte aborter og ekstrauterine graviditeter.</items>
+        <items id="comment">Summen av alle "Spontane aborter", "Provoserte aborter" og "Ekstrauterine graviditeter".</items>
+      </items>
+      <items code="at0018">
+        <items id="text">Flerlingefødsler (M)</items>
+        <items id="description">Antall fødsler der mer enn ett barn ble født.</items>
+      </items>
+      <items code="at0019">
+        <items id="text">Prematur fødsel definisjon</items>
+        <items id="description">Den anvendte definisjonen på verdien "Premature fødsler" benyttet i datainnsamlingen.</items>
+        <items id="comment">Kan være nyttig når man skal sammenligne data mellom ulike myndighetsområder, da definisjoner av prematur fødsel kan variere.</items>
+      </items>
+      <items code="at0020">
+        <items id="text">Fødsel til termin definisjon</items>
+        <items id="description">Den anvendte definisjonen på verdien "Fødsler til termin" benyttet i datainnsamlingen.</items>
+        <items id="comment">Kan være nyttig når man skal sammenligne data mellom ulike myndighetsområder, da definisjoner av fødsel til termin kan variere.</items>
+      </items>
+      <items code="at0021">
+        <items id="text">Spontane aborter definisjon</items>
+        <items id="description">Den anvendte definisjonen på verdien "Spontanaborter" benyttet i datainnsamlingen.</items>
+        <items id="comment">Avhengig av lokale definisjoner kan missed abortion inngå i dette dataelementet. Kan være nyttig når man skal sammenligne data mellom ulike myndighetsområder.</items>
+      </items>
+      <items code="at0022">
+        <items id="text">Para definisjon</items>
+        <items id="description">Den anvendte definisjonen på verdien "Para" i dataelementet benyttet i datainnsamlingen.</items>
+        <items id="comment">Kan være nyttig når man skal sammenligne data mellom ulike myndighetsområder, da definisjoner av para kan variere.</items>
+      </items>
+      <items code="at0023">
+        <items id="text">Levende barn definisjon</items>
+        <items id="description">Den anvendte definisjonen på verdien "Levende barn" benyttet i datainnsamlingen.</items>
+        <items id="comment">Kan være nyttig når man skal sammenligne data mellom ulike myndighetsområder, da definisjoner av levende barn kan variere.</items>
+      </items>
+      <items code="at0024">
+        <items id="text">Tilleggsinformasjon</items>
+        <items id="description">Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.</items>
+        <items id="comment">For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI.</items>
+      </items>
+      <items code="at0025">
+        <items id="text">Beskrivelse</items>
+        <items id="description">Fritekstbeskrivelse om kvinnens svangerskap og fødsler.</items>
+      </items>
+      <items code="at0026">
+        <items id="text">Kommentar</items>
+        <items id="description">Ytterligere fritekst om individets obstetriske historie som ikke er fanget opp i andre felt.</items>
+      </items>
+      <items code="at0027">
+        <items id="text">Provosert abort definisjon</items>
+        <items id="description">Den anvendte definisjonen på verdien "Provoserte aborter" benyttet i datainnsamlingen.</items>
+        <items id="comment">Kan være nyttig når man skal sammenligne data mellom ulike myndighetsområder, da definisjoner av provosert abort kan variere.</items>
+      </items>
+      <items code="at0028">
+        <items id="text">Levende fødte definisjon</items>
+        <items id="description">Den anvendte definisjonen på verdien "Levende fødte" benyttet i datainnsamlingen.</items>
+        <items id="comment">Kan være nyttig når man skal sammenligne data mellom ulike myndighetsområder, da definisjoner av levende fødte kan variere.</items>
+      </items>
+    </term_definitions>
+  </ontology>
+</archetype>
+

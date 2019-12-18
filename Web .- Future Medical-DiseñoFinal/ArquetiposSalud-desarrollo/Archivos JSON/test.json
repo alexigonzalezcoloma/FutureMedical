@@ -1,0 +1,20 @@
+{"meta":{
+	"name":"xdd",
+	"author":"xd",
+	"version":"xd"},
+	"format":"node_tree",
+	"data":{"id":"root","topic":"Arquetipo","children":[
+		{"id":"INSTRUCTION","topic":"INSTRUCTION","expanded":true,"children":[
+			{"id":"b'at0000'", "topic":"b'Care plan request'"},
+			{"id":"b'at0001'", "topic":"b'Activity'"},
+			{"id":"b'at0004'", "topic":"b'Tree'"},
+			{"id":"b'at0007'", "topic":"b'Description'"},
+			{"id":"b'at0011'", "topic":"b'Indication'"},
+			{"id":"b'at0017'", "topic":"b'Plan name'"},
+			{"id":"b'at0018'", "topic":"b'Date of onset'"},
+			{"id":"b'at0019'", "topic":"b'Comment'"},
+			{"id":"b'at0020'", "topic":"b'Tree'"},
+			{"id":"b'at0021'", "topic":"b'Extension'"}
+		]}
+	]}
+}

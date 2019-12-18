@@ -1,0 +1,17 @@
+{
+  "name": "editorarquetiposapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^6.0.10"
+  },
+  "devDependencies": {
+    "electron-reload": "^1.5.0"
+  }
+}
